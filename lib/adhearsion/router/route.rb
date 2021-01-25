@@ -49,6 +49,7 @@ module Adhearsion
               end
             else
               logger.info "Call #{call_id} routing completed. Call was already hung up."
+              logger.info "Call attributes: #{call.inspect} ***"
             end
           rescue Call::Hangup, Call::ExpiredError
           end
